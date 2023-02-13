@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Segunda entrega</title>
+</head>
+<body>
+    <!--Inicio del banner principal-->
+    <section class="flex-container">
+        <div class="caja">
+            <div class="container">
+                <h1><span>Bienvenido al simulador de</span></h1>
+                <span class="cen">de admistracion de</span>
+                <a class="button" href="">una Base de datos</a>
+            </div>
+        </div>
+    </section>
+    <!--Fin del banner principal-->
+    <section>
+        <h1 class="titulo">MENU DE PRODCUTOS</h1>
+    </section>
+    <section class="tablaPrincipal">
+        <table id="productos">
+          <thead id="producto_head">
+            <tr>
+              <th>CODIGO</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProductos"></tbody>
+        </table>
+      </section>
+      <section>
+            <form action=""></form>
+            <label for="">Ingresar nuevos Productos</label>
+            <br>
+            <label for="">Ingrese El Codigo del Producto</label>
+            <input type="text" id="codProducto">
+            <label for="">Ingrese El nombre</label>
+            <input type="text" id="newProducto">
+            <label for="">Ingrese el Precio</label>
+            <input type="text" id="newPrecio">
+            <input type="button" value="Buscar" id="btn-buscar">
+            <input type="button" value="actualizar" id="btn-actualizar">
+            <input type="button" value="Agregar Producto" id="btn-button">
+            <input type="button" value="Eliminar el ultimo producto Agregado" id="btn-eliminar">
+      </section>
+</body>
+<script src="js.js"></script>
+</html>

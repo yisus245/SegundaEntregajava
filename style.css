@@ -1,0 +1,114 @@
+/*Inicio de los estilos del banner*/
+.flex-container{
+    border: 1px solid black;
+    background:white ;
+    padding: 20px;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.caja{
+    border: 1px solid rgb(70, 69, 69);
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin: 2px;
+    position: relative;
+    background: url(https://img.freepik.com/fotos-premium/carrito-compras-pasillo-supermercado-estantes-productos-interior-desenfocado-fondo-desenfocado_293060-7523.jpg?w=1380) no-repeat center;
+    background-size: cover;
+    height: 500px;
+    width: 5500px;
+    overflow: hidden;
+}
+
+.main-image{
+    position: relative;
+    background: url(https://img.freepik.com/fotos-premium/carrito-compras-pasillo-supermercado-estantes-productos-interior-desenfocado-fondo-desenfocado_293060-7523.jpg?w=1380) no-repeat center;
+    background-size: cover;
+    height: 500px;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #222;;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container  h1{
+    margin: 0;
+    font-size: 66px;
+}
+
+.container h1 span{
+    border: 6px solid #222;
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.cen{
+    margin: 20px;
+    display: block;
+    font-size: 26px;
+}
+
+.button{
+    color: #313131;
+    padding: 10px 24px;
+    background: #f1f1f1;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: .6s;
+}
+
+.button:hover{
+    opacity: .6;
+}
+/*Fin de los estilos del banner*/
+/*Inicio de estilos de la pagina*/
+.titulo{
+    text-align: center;
+    font-size: 40px;
+}
+
+.tablaPrincipal{
+    text-align: -webkit-center;
+    font-size: 40px;
+}
+/*Fin del estilos del cuerpo*/
+/*responsive*/
+@media (max-width: 576px) {
+    .caja{
+        height: 100px;
+        width: 300px;
+    }
+    .main-image{
+        height: 100px;
+        width: 100px;
+    }
+    .container h1 span{
+       font-size: 5px;
+    }
+    .cen{
+        font-size: 5px;
+
+    }
+    .button{
+        font-size: 5px;
+
+    }
+    .tablaPrincipal{
+        text-align: -webkit-center;
+        font-size: 25px;
+    }
+
+
+}
