@@ -1,3 +1,4 @@
+//arrive usada
 const productos = [
     { id: 1, nombre: "Camisa roja", precio: 25 },
     { id: 2, nombre: "Pantalón azul", precio: 35 },
@@ -13,26 +14,25 @@ const productos = [
   
   const tablaProductos = document.getElementById('tablaProductos')
   const productoHead = document.getElementById('producto_head')
+    productoHead.className = 'background-table'
+    productos.forEach(function(producto) {
+      let fila = document.createElement('tr')
+      let celdaId = document.createElement('td')
+      let celdaNombre = document.createElement('td')
+      let celdaPrecio = document.createElement('td')
+    
+      celdaId.textContent = producto.id
+      celdaNombre.textContent = producto.nombre
+      celdaPrecio.textContent = producto.precio
+    
+      fila.append(celdaId)
+      fila.append(celdaNombre)
+      fila.append(celdaPrecio)
+    
+      tablaProductos.append(fila)
+    
+    }) 
   
-  productoHead.className = 'background-table'
-  productos.forEach(function(producto) {
-    let fila = document.createElement('tr')
-    let celdaId = document.createElement('td')
-    let celdaNombre = document.createElement('td')
-    let celdaPrecio = document.createElement('td')
-  
-    celdaId.textContent = producto.id
-    celdaNombre.textContent = producto.nombre
-    celdaPrecio.textContent = producto.precio
-  
-    fila.append(celdaId)
-    fila.append(celdaNombre)
-    fila.append(celdaPrecio)
-  
-    tablaProductos.append(fila)
-  
-  })
-
 //Declaracion de botones//
 const btn = document.getElementById('btn-button')
 const btneliminar = document.getElementById('btn-eliminar')
@@ -53,22 +53,25 @@ const btnactulizar = document.getElementById('btn-actualizar')
       document.getElementById('codProducto').value = ''
       document.getElementById('newProducto').value = ''
       document.getElementById('newPrecio').value = ''
-    //  // Inicio de la tabla de  Productos//
-  productoHead.className = 'background-table'
-  productos.forEach(function(producto) {
+    // //  // Inicio de la tabla de  Productos//
+    const tablaProductos2 = document.getElementById('tablaProductos')
+    const productoHead2 = document.getElementById('producto_head')
+    productoHead2.className = 'background-table'
+    document.getElementById('tablaProductos').innerHTML = ''
+    productos.forEach(function(producto2) {
     let fila = document.createElement('tr')
     let celdaId = document.createElement('td')
     let celdaNombre = document.createElement('td')
     let celdaPrecio = document.createElement('td')
-    celdaId.textContent = producto.id
-    celdaNombre.textContent = producto.nombre
-    celdaPrecio.textContent = producto.precio
+    celdaId.textContent = producto2.id
+    celdaNombre.textContent = producto2.nombre
+    celdaPrecio.textContent = producto2.precio
     fila.append(celdaId)
     fila.append(celdaNombre)
     fila.append(celdaPrecio)
-    tablaProductos.append(fila)
+    tablaProductos2.append(fila)
       })
-    //  //Fin de la tabla de Productos//
+     //Fin de la tabla de Productos//
    })
 //FUNCION DE ELIMINAR
 btneliminar.addEventListener('click', (e) =>{
@@ -81,24 +84,34 @@ btneliminar.addEventListener('click', (e) =>{
     //console.log('El elemento ' + elimi.nombre + ' fue eliminado del Arryve');
     alert('El elemento ' + elimi.nombre + ' fue eliminado del Arryve')
     document.getElementById('codProducto').value = ''
-    document.getElementById('newProducto').value = ''
-    document.getElementById('newPrecio').value = ''
-
+      document.getElementById('newProducto').value = ''
+      document.getElementById('newPrecio').value = ''
+    // //  // Inicio de la tabla de  Productos//
+    const tablaProductos2 = document.getElementById('tablaProductos')
+    const productoHead2 = document.getElementById('producto_head')
+    productoHead2.className = 'background-table'
+    document.getElementById('tablaProductos').innerHTML = ''
+    productos.forEach(function(producto2) {
+    let fila = document.createElement('tr')
+    let celdaId = document.createElement('td')
+    let celdaNombre = document.createElement('td')
+    let celdaPrecio = document.createElement('td')
+    celdaId.textContent = producto2.id
+    celdaNombre.textContent = producto2.nombre
+    celdaPrecio.textContent = producto2.precio
+    fila.append(celdaId)
+    fila.append(celdaNombre)
+    fila.append(celdaPrecio)
+    tablaProductos2.append(fila)
+      })
 })
 //FUNCION DE BUSQUEDA
 btnbuscar.addEventListener('click', (e) =>{
     e.preventDefault()
-    function esCereza(fruta) {
+    function buscar(nombreProducto) {
       let newProducto = document.getElementById('newProducto').value
-      return fruta.nombre === newProducto
+      return nombreProducto.nombre === newProducto
     }
-    console.log(productos.find(esCereza));
-    alert('EL elemento ' + productos.find(esCereza) + ' fue econtrado en el arrive')
+    console.log(productos.find(buscar));
+    alert('EL elemento ' + productos.find(buscar) + ' fue econtrado en el arrive')
 })
-
-btnactulizar.addEventListener('click', (e) =>{
-  e.preventDefault()
-  let actua = productos.splice()
-
-})
- //Fin del evento click//
